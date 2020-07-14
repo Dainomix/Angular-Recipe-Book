@@ -1,21 +1,18 @@
 # AngularRecipeBook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.\
 
-Code Structure (2020. 07. 14)
-Root
-└ Header (Component)                  // created by CLi
-└ /shoppingList/
-    └ shopping-list (Component)       // manually created
-    └ shopping-list-edit (Component)  // manually created
-└ /recipeBook/
-    └ recipe-book-list (Component)    // cerated by Cli
-    └ recipe-book-detail (Component)  // created by Cli
-    └ recipe-book-item (Component)    // created by Cli
-└ /Model/
-    └ Recipe (Interface)              // created by Cli
-    └ Ingredient (Interface)          // created by Cli
-
+Modified Code File Structure (2020. 07. 14)\
+\
+Root\
+└ Header (Component)\
+└ shopping-list (Component)\
+&nbsp; &nbsp; &nbsp; &nbsp;└ shopping-list (Component)\
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;└ shopping-list-edit (Component)\
+└ recipes\
+&nbsp; &nbsp; &nbsp; &nbsp;└ recipe-list (Component)\
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;└ recipe-item (Component)\
+&nbsp; &nbsp; &nbsp; &nbsp;└ recipe-detail (Component)\
 
 ## Development server
 
