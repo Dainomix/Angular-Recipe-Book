@@ -8,7 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-Recipe-Book';
 
-  /* Challenge: Adding Navigation function with Event Binding and ngIf */   
+  /* Solution Version*/
+  loadedFeature = 'recipe';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+  /*******************/
+
+  /* 
+  // Challenge: Adding Navigation function with Event Binding and ngIf
   showRecipe: boolean = true;
   showShoppingList: boolean = true;
 
@@ -16,5 +25,5 @@ export class AppComponent {
     this.showRecipe = displayOption.isDisplayRecipe;
     this.showShoppingList = displayOption.isDisplayShoppingList;
   }
-  /*********************************************************************/    
+  */    
 }

@@ -6,8 +6,10 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
     styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-    
-    @Output() showLayoutEvent = new EventEmitter<{isDisplayRecipe:boolean, isDisplayShoppingList: boolean}>();
+
+    // @Output() showLayoutEvent = new EventEmitter<{isDisplayRecipe:boolean, isDisplayShoppingList: boolean}>();
+    @Output() featureSelected = new EventEmitter<string>();
+
     collapsed: boolean = true;
 
     constructor() {
@@ -16,7 +18,14 @@ export class HeaderComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    /* Challenge: Adding Navigation function with Event Binding and ngIf */
+    /* Solution Version*/
+    onSelect(feature: string) {
+        this.featureSelected.emit(feature);
+    }
+    /*******************/
+    
+    /* 
+    // Challenge: Adding Navigation function with Event Binding and ngIf
     onShowRecipeBook(): void{
         this.showLayoutEvent.emit({
             isDisplayRecipe: true,
@@ -37,6 +46,9 @@ export class HeaderComponent implements OnInit {
             isDisplayShoppingList: true,
         });
     }
-    /*********************************************************************/  
+    */
+
+
+
 
 }
