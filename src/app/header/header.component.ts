@@ -7,7 +7,6 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 })
 export class HeaderComponent implements OnInit {
 
-    // @Output() showLayoutEvent = new EventEmitter<{isDisplayRecipe:boolean, isDisplayShoppingList: boolean}>();
     @Output() featureSelected = new EventEmitter<string>();
 
     collapsed: boolean = true;
@@ -22,33 +21,5 @@ export class HeaderComponent implements OnInit {
     onSelect(feature: string) {
         this.featureSelected.emit(feature);
     }
-    /*******************/
-    
-    /* 
-    // Challenge: Adding Navigation function with Event Binding and ngIf
-    onShowRecipeBook(): void{
-        this.showLayoutEvent.emit({
-            isDisplayRecipe: true,
-            isDisplayShoppingList: true,
-        });
-    }
-
-    onShowRecipe(): void {
-        this.showLayoutEvent.emit({
-            isDisplayRecipe: true,
-            isDisplayShoppingList: false,
-        });
-    }
-
-    onShowShoppingList(): void {
-        this.showLayoutEvent.emit({
-            isDisplayRecipe: false,
-            isDisplayShoppingList: true,
-        });
-    }
-    */
-
-
-
 
 }

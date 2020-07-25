@@ -14,16 +14,4 @@ export class AppComponent {
   onNavigate(feature: string) {
     this.loadedFeature = feature;
   }
-  /*******************/
-
-  /* 
-  // Challenge: Adding Navigation function with Event Binding and ngIf
-  showRecipe: boolean = true;
-  showShoppingList: boolean = true;
-
-  onDisplayRecipeBook(displayOption: {isDisplayRecipe:boolean, isDisplayShoppingList: boolean}) {
-    this.showRecipe = displayOption.isDisplayRecipe;
-    this.showShoppingList = displayOption.isDisplayShoppingList;
-  }
-  */    
 }
