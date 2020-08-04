@@ -1,7 +1,8 @@
-import { EventEmitter } from "@angular/core";
+import { EventEmitter, Injectable } from "@angular/core";
 
 import { Ingredient } from "../shared/ingredient.model";
 
+@Injectable()
 export class ShoppingListService {
 
     ingredientsChanged = new EventEmitter<Ingredient[]>();
@@ -18,6 +19,16 @@ export class ShoppingListService {
     addIngredient(ingredient:Ingredient) {
         this.ingredients.push(ingredient);
         // Inform ingredients array changed
+        this.ingredientsChanged.emit(this.ingredients.slice());
+    }
+
+    addIngredients(ingredients:Ingredient[]) {    
+        // for(let ingredient of ingredients) {
+        //     this.addIngredient(ingredient);
+        // }
+
+        // ... spread operator(ES6)
+        this.ingredients.push(...ingredients);
         this.ingredientsChanged.emit(this.ingredients.slice());
     }
     
