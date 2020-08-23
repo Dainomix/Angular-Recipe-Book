@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Recipe-Book';
-
-  /* Solution Version*/
-  loadedFeature = 'recipe';
-
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
 }
