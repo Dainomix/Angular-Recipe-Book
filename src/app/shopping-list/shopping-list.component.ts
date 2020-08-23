@@ -11,9 +11,9 @@ import { ShoppingListService } from './shopping-list.service';
 })
 export class ShoppingListComponent implements OnInit, OnDestroy {
 
-  ingredients: Ingredient[]
+  ingredients: Ingredient[];
 
-  private igChangeSub: Subscription
+  private igChangeSub: Subscription;
 
   constructor(private slService:ShoppingListService) { }
 
